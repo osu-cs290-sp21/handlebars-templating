@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Photos of People - Luke Skywalker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="/index.js" charset="utf-8" defer></script>
+  </head>
+  <body>
+
+    <header>
+      <h1 class="site-title">Photos of People</h1>
+    </header>
+
+    <nav class="navbar">
+      <ul class="navlist">
+        <li class="navitem"><a href="/">Home</a></li>
+        <li class="navitem"><a href="/people">People</a></li>
+        <li class="navitem right"><a href="#">Login</a></li>
+      </ul>
+    </nav>
+
+    <main class="photo-page">
+
+      <div class="title-container">
+        <h1>Photos of Luke Skywalker</h1>
+      </div>
+
+      <div class="photo-card-container">
+
+        <section class="photo-card">
+          <div class="img-container">
+            <img class="person-photo-img" src="https://vignette3.wikia.nocookie.net/starwars/images/6/62/LukeGreenSaber-MOROTJ.png" />
+          </div>
+          <div class="caption">
+            Luke ready to fight.
+          </div>
+        </section>
+
+        <section class="photo-card">
+          <div class="img-container">
+            <img class="person-photo-img" src="https://s-media-cache-ak0.pinimg.com/736x/2f/b7/dc/2fb7dc3e5cb7b12b454aa1bfdf45573f.jpg" />
+          </div>
+          <div class="caption">
+            GQ Luke.
+          </div>
+        </section>
+
+        <section class="photo-card">
+          <div class="img-container">
+            <img class="person-photo-img" src="http://esq.h-cdn.co/assets/15/43/980x490/landscape-1445356666-star-wars-luke-skywalker-tatooine.jpg" />
+          </div>
+          <div class="caption">
+            Luke looking pensive.
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+
+    <button type="button" id="add-photo-button"><i class="fa fa-camera"></i></button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="add-photo-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Post a photo</h3>
+          <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="photo-input-element">
+            <label for="photo-url-input">Photo URL</label>
+            <input type="text" id="photo-url-input">
+          </div>
+
+          <div class="photo-input-element">
+            <label for="photo-caption-input">Caption</label>
+            <input type="text" id="photo-caption-input"></input>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+          <button type="button" id="modal-accept" class="action-button">Create Post</button>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
