@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "handlebars photoCard.handlebars -f public/photoCardTemplate.js",
+    "build": "handlebars views/partials/photoCard.handlebars -f public/photoCardTemplate.js",
     "prestart": "npm run build",
     "predev": "npm run build"
   },
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/osu-cs290-sp21/handlebars-templating#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
     "handlebars": "^4.7.7"
   },
   "devDependencies": {
