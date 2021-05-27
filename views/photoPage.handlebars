@@ -34,7 +34,9 @@
       <div class="photo-card-container">
 
         <!-- Use photo card template to render photo cards here. -->
-        {{> photoCard}}
+        {{#each photos}}
+          {{> photoCard}}
+        {{/each}}
 
         {{#if displayIfContent}}
           <h2>This is the if content</h2>
