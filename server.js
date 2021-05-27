@@ -9,7 +9,7 @@ var app = express();
 
 var port = 8000;
 
-app.engine('handlebars', exphbs({ defaultLayout: null }))
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 app.use(express.static('public'));
@@ -61,7 +61,10 @@ app.get('/people/:person', function (req, res, next) {
 });
 
 app.get("*", function (req, res, next) {
-  res.status(404).sendFile(__dirname + '/public/404.html');
+  res.status(404).render('404', {
+    page: req.url,
+    scripts: [ "/index.js" ]
+  });
 });
 
 app.listen(port, function (err) {
